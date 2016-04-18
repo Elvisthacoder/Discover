@@ -57,4 +57,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        switchFourItems.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    bottomNavigation.addItem(item4);
+                    bottomNavigation.addItem(item5);
+                } else {
+                    bottomNavigation.removeAllItems();
+                    bottomNavigation.addItems(items);
+                }
+            }
+        });
+
     }
