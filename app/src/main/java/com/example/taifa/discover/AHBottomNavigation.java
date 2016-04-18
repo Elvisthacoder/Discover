@@ -244,6 +244,11 @@ public class AHBottomNavigation extends FrameLayout{
             itemWidth = maxWidth;
         }
 
+        float difference = context.getResources().getDimension(R.dimen.bottom_navigation_small_selected_width_difference);
+        selectedItemWidth = itemWidth + items.size() * difference;
+        itemWidth -= difference;
+        notSelectedItemWidth = itemWidth;
+
 
 
 
