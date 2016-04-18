@@ -390,6 +390,16 @@ public class AHBottomNavigation extends FrameLayout{
                 AHHelper.updateDrawableColor(context, items.get(currentItem).getResource(), icon,
                         itemActiveColor, itemInactiveColor);
             }
+
+            currentItem = itemIndex;
+            currentColor = items.get(currentItem).getColor();
+
+            if (listener != null) {
+                listener.onTabSelected(itemIndex);
+            }
+            if (tabSelectedListener != null) {
+                tabSelectedListener.onTabSelected(itemIndex, false);
+            }
         }
 
 
