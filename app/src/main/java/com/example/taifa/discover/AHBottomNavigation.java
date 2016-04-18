@@ -236,6 +236,14 @@ public class AHBottomNavigation extends FrameLayout{
             return;
         }
 
+        float itemWidth = layoutWidth / items.size();
+
+        if (itemWidth < minWidth) {
+            itemWidth = minWidth;
+        } else if (itemWidth > maxWidth) {
+            itemWidth = maxWidth;
+        }
+
 
 
 
