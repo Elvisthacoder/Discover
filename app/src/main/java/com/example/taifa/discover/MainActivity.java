@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SwitchCompat;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(int position, boolean wasSelected) {
                 currentItem.setText("Current item: " + position + "\n(was selected: " + wasSelected + ")");
+            }
+        });
+
+        switchColored.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                bottomNavigation.setColored(isChecked);
             }
         });
 
