@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
         initUI();
     }
 
+    /**
+     * Init UI
+     */
+
     private void initUI() {
 
         final SwitchCompat switchColored = (SwitchCompat) findViewById(R.id.home_switch_colored);
