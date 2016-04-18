@@ -194,10 +194,14 @@ public class AHBottomNavigation extends FrameLayout{
                 icon.setImageDrawable(AHHelper.getTintDrawable(context, items.get(i).getResource(),
                         currentItem == i ? ContextCompat.getColor(context, R.color.colorActiveSmall) :
                                 ContextCompat.getColor(context, R.color.colorInactiveSmall)));
-               
+                title.setTextColor(currentItem == i ?
+                        ContextCompat.getColor(context, R.color.colorActiveSmall) :
+                        ContextCompat.getColor(context, R.color.colorInactiveSmall));
 
 
-        }
+
+
+            }
 
 
 
