@@ -138,6 +138,17 @@ public class AHBottomNavigation extends FrameLayout{
         }
     }
 
+    /**
+     * Create classic items (only 3 items in the bottom navigation)
+     *
+     * @param linearLayout The layout where the items are added
+     */
+    private void createClassicItems(LinearLayout linearLayout){
+
+
+        
+    }
+
 
 
 
