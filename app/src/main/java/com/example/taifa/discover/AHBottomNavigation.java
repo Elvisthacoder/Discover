@@ -2,6 +2,7 @@ package com.example.taifa.discover;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -70,6 +71,14 @@ public class AHBottomNavigation extends FrameLayout{
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         createItems();
+    }
+
+    /**
+     * Init the default colors
+     */
+    private void initColors() {
+        accentColor = ContextCompat.getColor(context, R.color.colorAccent);
+        inactiveColor = ContextCompat.getColor(context, R.color.colorInactive);
     }
 
 
