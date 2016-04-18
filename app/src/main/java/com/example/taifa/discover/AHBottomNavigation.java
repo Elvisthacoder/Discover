@@ -350,7 +350,7 @@ public class AHBottomNavigation extends FrameLayout{
                     int cx = (int) views.get(itemIndex).getX() + views.get(itemIndex).getWidth() / 2;
                     int cy = views.get(itemIndex).getHeight() / 2;
                     Animator anim = ViewAnimationUtils.createCircularReveal(backgroundColorView, cx, cy, 0, finalRadius);
-                    anim.addListener(new Animator.AnimatorListener(){
+                    anim.addListener(new Animator.AnimatorListener() {
 
                         @Override
                         public void onAnimationStart(Animator animation) {
@@ -390,6 +390,7 @@ public class AHBottomNavigation extends FrameLayout{
                 AHHelper.updateDrawableColor(context, items.get(currentItem).getResource(), icon,
                         itemActiveColor, itemInactiveColor);
             }
+        }
 
 
             }
