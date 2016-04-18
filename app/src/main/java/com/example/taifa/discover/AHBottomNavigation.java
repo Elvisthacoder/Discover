@@ -249,6 +249,12 @@ public class AHBottomNavigation extends FrameLayout{
         itemWidth -= difference;
         notSelectedItemWidth = itemWidth;
 
+        for (int i = 0; i < items.size(); i++){
+
+
+            
+        }
+
 
 
 
