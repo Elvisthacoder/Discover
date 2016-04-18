@@ -148,6 +148,11 @@ public class AHBottomNavigation extends FrameLayout{
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+        float height = context.getResources().getDimension(R.dimen.bottom_navigation_height);
+        float minWidth = context.getResources().getDimension(R.dimen.bottom_navigation_min_width);
+        float maxWidth = context.getResources().getDimension(R.dimen.bottom_navigation_max_width);
+
+
 
     }
 
