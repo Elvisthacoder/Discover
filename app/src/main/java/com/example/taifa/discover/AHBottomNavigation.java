@@ -147,7 +147,7 @@ public class AHBottomNavigation extends FrameLayout{
      *
      * @param linearLayout The layout where the items are added
      */
-    private void createClassicItems(LinearLayout linearLayout){
+    private void createClassicItems(LinearLayout linearLayout) {
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -216,6 +216,12 @@ public class AHBottomNavigation extends FrameLayout{
                     updateItems(itemIndex);
                 }
             });
+
+            LayoutParams params = new LayoutParams((int) itemWidth, (int) height);
+            linearLayout.addView(view, params);
+            views.add(view);
+        }
+    }
 
 
 
