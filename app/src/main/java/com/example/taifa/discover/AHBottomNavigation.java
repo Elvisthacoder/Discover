@@ -282,6 +282,13 @@ public class AHBottomNavigation extends FrameLayout{
                         ContextCompat.getColor(context, R.color.colorActiveSmall) :
                         ContextCompat.getColor(context, R.color.colorInactiveSmall));
 
+            } else {
+                setBackgroundColor(defaultBackgroundColor);
+                icon.setImageDrawable(AHHelper.getTintDrawable(context, items.get(i).getResource(),
+                        currentItem == i ? accentColor : inactiveColor));
+                title.setTextColor(currentItem == i ? accentColor : inactiveColor);
+            }
+
 
 
         }
