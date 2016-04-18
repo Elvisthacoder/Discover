@@ -316,6 +316,15 @@ public class AHBottomNavigation extends FrameLayout{
             return;
         }
 
+        int activePaddingTop = (int) context.getResources().getDimension(R.dimen.bottom_navigation_padding_top_active);
+        int inactivePaddingTop = (int) context.getResources().getDimension(R.dimen.bottom_navigation_padding_top_inactive);
+        float activeSize = context.getResources().getDimension(R.dimen.bottom_navigation_text_size_active);
+        float inactiveSize = context.getResources().getDimension(R.dimen.bottom_navigation_text_size_inactive);
+        int itemActiveColor = colored ? ContextCompat.getColor(context, R.color.colorActiveSmall) :
+                accentColor;
+        int itemInactiveColor = colored ? ContextCompat.getColor(context, R.color.colorInactiveSmall) :
+                inactiveColor;
+
 
 
         }
