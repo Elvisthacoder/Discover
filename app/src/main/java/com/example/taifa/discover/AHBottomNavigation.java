@@ -223,6 +223,12 @@ public class AHBottomNavigation extends FrameLayout{
         }
     }
 
+    private void createSmallItems(LinearLayout linearLayout) {
+
+
+        
+    }
+
 
 
 
