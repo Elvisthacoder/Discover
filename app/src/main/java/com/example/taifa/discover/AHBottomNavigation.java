@@ -11,7 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -156,13 +158,24 @@ public class AHBottomNavigation extends FrameLayout{
         if (layoutWidth == 0 || items.size() == 0) {
             return;
         }
-        
+
         float itemWidth = layoutWidth / items.size();
         if (itemWidth < minWidth) {
             itemWidth = minWidth;
         } else if (itemWidth > maxWidth) {
             itemWidth = maxWidth;
         }
+
+        for (int i = 0; i < items.size(); i++) {
+
+            final int itemIndex = i;
+            AHBottomNavigationItem item = items.get(itemIndex);
+
+            View view = inflater.inflate(R.layout.bottom_navigation_item, this, false);
+            ImageView icon = (ImageView) view.findViewById(R.id.bottom_navigation_item_icon);
+            TextView title = (TextView) view.findViewById(R.id.bottom_navigation_item_title);
+            icon.setImageResource(item.getResource());
+            title.setText(item.getTitle());
 
     }
 
