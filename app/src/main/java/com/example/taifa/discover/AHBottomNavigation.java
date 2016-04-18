@@ -289,6 +289,21 @@ public class AHBottomNavigation extends FrameLayout{
                 title.setTextColor(currentItem == i ? accentColor : inactiveColor);
             }
 
+            title.setAlpha(currentItem == i ? 1 : 0);
+            view.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    updateSmallItems(itemIndex);
+                }
+            });
+
+            LayoutParams params = new LayoutParams(
+                    i == currentItem ? (int) selectedItemWidth : (int) itemWidth, (int) height);
+            linearLayout.addView(view, params);
+            views.add(view);
+        }
+    }
+
 
 
         }
