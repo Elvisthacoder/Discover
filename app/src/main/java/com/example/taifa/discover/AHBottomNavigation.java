@@ -378,7 +378,14 @@ public class AHBottomNavigation extends FrameLayout{
                     setBackgroundColor(defaultBackgroundColor);
                 }
 
-                    }
+            } else if (i == currentItem) {
+
+                final View container = views.get(currentItem).findViewById(R.id.bottom_navigation_container);
+                final TextView title = (TextView) views.get(currentItem).findViewById(R.id.bottom_navigation_item_title);
+                final ImageView icon = (ImageView) views.get(currentItem).findViewById(R.id.bottom_navigation_item_icon);
+
+
+            }
 
 
 
