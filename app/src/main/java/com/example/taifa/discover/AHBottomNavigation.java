@@ -251,8 +251,17 @@ public class AHBottomNavigation extends FrameLayout{
 
         for (int i = 0; i < items.size(); i++){
 
+            final int itemIndex = i;
+            AHBottomNavigationItem item = items.get(itemIndex);
 
-            
+            View view = inflater.inflate(R.layout.bottom_navigation_small_item, this, false);
+            ImageView icon = (ImageView) view.findViewById(R.id.bottom_navigation_small_item_icon);
+            TextView title = (TextView) view.findViewById(R.id.bottom_navigation_small_item_title);
+            icon.setImageResource(item.getResource());
+            title.setText(item.getTitle());
+
+
+
         }
 
 
