@@ -260,6 +260,15 @@ public class AHBottomNavigation extends FrameLayout{
             icon.setImageResource(item.getResource());
             title.setText(item.getTitle());
 
+            if (i == currentItem) {
+                int activePaddingTop = (int) context.getResources()
+                        .getDimension(R.dimen.bottom_navigation_small_padding_top_active);
+                int activePaddingBottom = (int) context.getResources()
+                        .getDimension(R.dimen.bottom_navigation_padding_bottom);
+                view.setPadding(view.getPaddingLeft(), activePaddingTop, view.getPaddingRight(),
+                        activePaddingBottom);
+            }
+
 
 
         }
