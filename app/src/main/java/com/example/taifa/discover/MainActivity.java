@@ -39,4 +39,14 @@ public class MainActivity extends AppCompatActivity {
         items.add(item2);
         items.add(item3);
 
+        bottomNavigation.addItems(items);
+        bottomNavigation.setAccentColor(Color.parseColor("#F63D2B"));
+        bottomNavigation.setInactiveColor(Color.parseColor("#747474"));
+        bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(int position, boolean wasSelected) {
+                currentItem.setText("Current item: " + position + "\n(was selected: " + wasSelected + ")");
+            }
+        });
+
     }
