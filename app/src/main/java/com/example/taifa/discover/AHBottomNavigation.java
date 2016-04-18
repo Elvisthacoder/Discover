@@ -32,5 +32,9 @@ public class AHBottomNavigation extends FrameLayout{
     private int accentColor = Color.WHITE;
     private int inactiveColor = Color.WHITE;
 
+    private int currentItem = 0;
+    private int currentColor = 0;
+    private float selectedItemWidth, notSelectedItemWidth;
+
 
 }
