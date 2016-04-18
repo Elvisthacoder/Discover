@@ -371,6 +371,13 @@ public class AHBottomNavigation extends FrameLayout{
                     });
                     anim.start();
 
+                } else if (colored) {
+                    AHHelper.updateViewBackgroundColor(this, currentColor,
+                            items.get(itemIndex).getColor());
+                } else {
+                    setBackgroundColor(defaultBackgroundColor);
+                }
+
                     }
 
 
