@@ -403,7 +403,31 @@ public class AHBottomNavigation extends FrameLayout{
         }
 
 
+        /**
+         * Update Small items UI
+         */
+    private void updateSmallItems(final int itemIndex) {
+
+        if (currentItem == itemIndex) {
+            if (tabSelectedListener != null) {
+                tabSelectedListener.onTabSelected(itemIndex, true);
             }
+            return;
+        }
+
+        int activePaddingTop = (int) context.getResources().getDimension(R.dimen.bottom_navigation_small_padding_top_active);
+        int inactivePadding = (int) context.getResources().getDimension(R.dimen.bottom_navigation_small_padding_top);
+        int itemActiveColor = colored ? ContextCompat.getColor(context, R.color.colorActiveSmall) :
+                accentColor;
+        int itemInactiveColor = colored ? ContextCompat.getColor(context, R.color.colorInactiveSmall) :
+                inactiveColor;
+
+
+    }
+
+
+
+}
 
 
 
