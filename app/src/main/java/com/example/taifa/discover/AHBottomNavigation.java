@@ -6,6 +6,7 @@ import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -204,6 +205,10 @@ public class AHBottomNavigation extends FrameLayout{
                         currentItem == i ? accentColor : inactiveColor));
                 title.setTextColor(currentItem == i ? accentColor : inactiveColor);
             }
+
+            title.setTextSize(TypedValue.COMPLEX_UNIT_PX, currentItem == i ?
+                    context.getResources().getDimension(R.dimen.bottom_navigation_text_size_active) :
+                    context.getResources().getDimension(R.dimen.bottom_navigation_text_size_inactive));
 
 
 
