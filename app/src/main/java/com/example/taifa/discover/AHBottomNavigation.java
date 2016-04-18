@@ -12,5 +12,9 @@ public class AHBottomNavigation extends FrameLayout{
     private static final int MIN_ITEMS = 3;
     private static final int MAX_ITEMS = 5;
 
+    // Listener
+    private AHBottomNavigationListener listener;
+    private OnTabSelectedListener tabSelectedListener;
+
 
 }
