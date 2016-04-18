@@ -352,6 +352,11 @@ public class AHBottomNavigation extends FrameLayout{
                     Animator anim = ViewAnimationUtils.createCircularReveal(backgroundColorView, cx, cy, 0, finalRadius);
                     anim.addListener(new Animator.AnimatorListener(){
 
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+                        }
+                    }
+
 
 
 
