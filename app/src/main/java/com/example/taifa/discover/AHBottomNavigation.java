@@ -1,5 +1,6 @@
 package com.example.taifa.discover;
 
+import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -10,6 +11,7 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -340,6 +342,21 @@ public class AHBottomNavigation extends FrameLayout{
                 AHHelper.updateTextSize(title, inactiveSize, activeSize);
                 AHHelper.updateDrawableColor(context, items.get(itemIndex).getResource(), icon,
                         itemInactiveColor, itemActiveColor);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && colored) {
+                    backgroundColorView.setBackgroundColor(items.get(itemIndex).getColor());
+                    int finalRadius = Math.max(getWidth(), getHeight());
+
+                    int cx = (int) views.get(itemIndex).getX() + views.get(itemIndex).getWidth() / 2;
+                    int cy = views.get(itemIndex).getHeight() / 2;
+                    Animator anim = ViewAnimationUtils.createCircularReveal(backgroundColorView, cx, cy, 0, finalRadius);
+                    anim.addListener(new Animator.AnimatorListener(){
+
+
+
+
+
+                }
 
 
         }
