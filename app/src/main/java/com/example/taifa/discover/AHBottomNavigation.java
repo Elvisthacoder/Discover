@@ -355,6 +355,11 @@ public class AHBottomNavigation extends FrameLayout{
                         @Override
                         public void onAnimationStart(Animator animation) {
                         }
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            setBackgroundColor(items.get(itemIndex).getColor());
+                        }
                     }
 
 
