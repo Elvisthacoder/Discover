@@ -365,6 +365,11 @@ public class AHBottomNavigation extends FrameLayout{
                         public void onAnimationCancel(Animator animation) {
                         }
 
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+                        }
+                    });
+
                     }
 
 
