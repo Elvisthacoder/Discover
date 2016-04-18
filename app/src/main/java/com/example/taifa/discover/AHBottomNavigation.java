@@ -2,9 +2,12 @@ package com.example.taifa.discover;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import java.util.ArrayList;
@@ -79,6 +82,28 @@ public class AHBottomNavigation extends FrameLayout{
     private void initColors() {
         accentColor = ContextCompat.getColor(context, R.color.colorAccent);
         inactiveColor = ContextCompat.getColor(context, R.color.colorInactive);
+    }
+
+    /**
+     * Init
+     */
+    private void initViews() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            setElevation(context.getResources().getDimension(R.dimen.bottom_navigation_elevation));
+            setClipToPadding(false);
+        }
+
+        ViewGroup.LayoutParams params = getLayoutParams();
+        params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        params.height = (int) context.getResources().getDimension(R.dimen.bottom_navigation_height);
+        setLayoutParams(params);
+
+        if (items.size() < MIN_ITEMS) {
+            Log.w(TAG, "The items list should have at least 3 items");
+        } else if (items.size() > MAX_ITEMS) {
+            Log.w(TAG, "The items list should not have more than 5 items");
+        }
     }
 
 
