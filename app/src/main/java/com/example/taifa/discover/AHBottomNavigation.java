@@ -369,6 +369,7 @@ public class AHBottomNavigation extends FrameLayout{
                         public void onAnimationRepeat(Animator animation) {
                         }
                     });
+                    anim.start();
 
                     }
 
