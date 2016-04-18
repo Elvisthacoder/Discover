@@ -185,6 +185,13 @@ public class AHBottomNavigation extends FrameLayout{
                         view.getPaddingBottom());
             }
 
+            if (colored) {
+                if (i == currentItem) {
+                    setBackgroundColor(item.getColor());
+                    currentColor = item.getColor();
+                }
+
+
         }
 
 
