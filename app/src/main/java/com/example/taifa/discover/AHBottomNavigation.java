@@ -225,8 +225,11 @@ public class AHBottomNavigation extends FrameLayout{
 
     private void createSmallItems(LinearLayout linearLayout) {
 
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        
+
+
+
     }
 
 
