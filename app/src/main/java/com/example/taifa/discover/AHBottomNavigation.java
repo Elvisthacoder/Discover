@@ -210,10 +210,18 @@ public class AHBottomNavigation extends FrameLayout{
                     context.getResources().getDimension(R.dimen.bottom_navigation_text_size_active) :
                     context.getResources().getDimension(R.dimen.bottom_navigation_text_size_inactive));
 
+            view.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    updateItems(itemIndex);
+                }
+            });
 
 
 
-            }
+
+
+        }
 
 
 
