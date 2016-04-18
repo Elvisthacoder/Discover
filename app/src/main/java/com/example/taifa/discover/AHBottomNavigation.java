@@ -36,5 +36,16 @@ public class AHBottomNavigation extends FrameLayout{
     private int currentColor = 0;
     private float selectedItemWidth, notSelectedItemWidth;
 
+    /**
+     * Constructor
+     *
+     * @param context
+     */
+    public AHBottomNavigation(Context context) {
+        super(context);
+        this.context = context;
+        initColors();
+    }
+
 
 }
