@@ -60,5 +60,11 @@ public class AHBottomNavigation extends FrameLayout{
         initColors();
     }
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        initViews();
+    }
+
 
 }
