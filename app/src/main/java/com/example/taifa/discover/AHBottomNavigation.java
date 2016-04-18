@@ -6,9 +6,11 @@ import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -105,6 +107,39 @@ public class AHBottomNavigation extends FrameLayout{
             Log.w(TAG, "The items list should not have more than 5 items");
         }
     }
+
+    /**
+     * Create the items in the bottom navigation
+     */
+    private void createItems() {
+
+        removeAllViews();
+        views.clear();
+
+        backgroundColorView = new View(context);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && colored) {
+            LayoutParams backgroundLayoutParams = new LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            addView(backgroundColorView, backgroundLayoutParams);
+        }
+
+        LinearLayout linearLayout = new LinearLayout(context);
+        linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+        linearLayout.setGravity(Gravity.CENTER);
+
+        int layoutHeight = (int) context.getResources().getDimension(R.dimen.bottom_navigation_height);
+        LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, layoutHeight);
+        addView(linearLayout, layoutParams);
+
+        if (items.size() == MIN_ITEMS) {
+            createClassicItems(linearLayout);
+        } else {
+            createSmallItems(linearLayout);
+        }
+    }
+
+
+
 
 
 
