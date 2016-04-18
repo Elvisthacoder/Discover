@@ -54,5 +54,11 @@ public class AHBottomNavigation extends FrameLayout{
         initColors();
     }
 
+    public AHBottomNavigation(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        this.context = context;
+        initColors();
+    }
+
 
 }
