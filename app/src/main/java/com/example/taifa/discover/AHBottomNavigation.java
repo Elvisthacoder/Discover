@@ -304,6 +304,18 @@ public class AHBottomNavigation extends FrameLayout{
         }
     }
 
+    /**
+     * Update Items UI
+     */
+    private void updateItems(final int itemIndex) {
+
+        if (currentItem == itemIndex) {
+            if (tabSelectedListener != null) {
+                tabSelectedListener.onTabSelected(itemIndex, true);
+            }
+            return;
+        }
+
 
 
         }
