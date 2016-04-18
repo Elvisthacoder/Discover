@@ -35,5 +35,8 @@ public class MainActivity extends AppCompatActivity {
         final AHBottomNavigationItem item4 = new AHBottomNavigationItem("Label Four", R.drawable.ic_maps_local_bar, Color.parseColor("#6C4A42"));
         final AHBottomNavigationItem item5 = new AHBottomNavigationItem("Label Five", R.drawable.ic_maps_place, Color.parseColor("#F63D2B"));
 
+        items.add(item1);
+        items.add(item2);
+        items.add(item3);
 
     }
