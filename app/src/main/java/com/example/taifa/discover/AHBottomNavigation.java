@@ -422,8 +422,17 @@ public class AHBottomNavigation extends FrameLayout{
         int itemInactiveColor = colored ? ContextCompat.getColor(context, R.color.colorInactiveSmall) :
                 inactiveColor;
 
+        for (int i = 0; i < views.size(); i++) {
 
-    }
+            if (i == itemIndex) {
+
+                final View container = views.get(itemIndex).findViewById(R.id.bottom_navigation_small_container);
+                final TextView title = (TextView) views.get(itemIndex).findViewById(R.id.bottom_navigation_small_item_title);
+                final ImageView icon = (ImageView) views.get(itemIndex).findViewById(R.id.bottom_navigation_small_item_icon);
+
+
+
+            }
 
 
 
