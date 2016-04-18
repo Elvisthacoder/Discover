@@ -2,6 +2,7 @@ package com.example.taifa.discover;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -43,6 +44,12 @@ public class AHBottomNavigation extends FrameLayout{
      */
     public AHBottomNavigation(Context context) {
         super(context);
+        this.context = context;
+        initColors();
+    }
+
+    public AHBottomNavigation(Context context, AttributeSet attrs) {
+        super(context, attrs);
         this.context = context;
         initColors();
     }
