@@ -520,6 +520,16 @@ public class AHBottomNavigation extends FrameLayout{
         return defaultBackgroundColor;
     }
 
+    /**
+     * Set the bottom navigation background color
+     *
+     * @param defaultBackgroundColor The bottom navigation background color
+     */
+    public void setDefaultBackgroundColor(int defaultBackgroundColor) {
+        this.defaultBackgroundColor = defaultBackgroundColor;
+        createItems();
+    }
+
 
 
 
