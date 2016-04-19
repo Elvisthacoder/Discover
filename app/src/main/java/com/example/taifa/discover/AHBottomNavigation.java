@@ -496,10 +496,18 @@ public class AHBottomNavigation extends FrameLayout{
         createItems();
     }
 
+    /**
+     * Return if the Bottom Navigation is colored
+     */
+    public boolean isColored() {
+        return colored;
+    }
 
 
 
-            }
+
+
+}
 
 
 
