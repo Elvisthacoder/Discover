@@ -503,6 +503,14 @@ public class AHBottomNavigation extends FrameLayout{
         return colored;
     }
 
+    /**
+     * Set if the Bottom Navigation is colored
+     */
+    public void setColored(boolean colored) {
+        this.colored = colored;
+        createItems();
+    }
+
 
 
 
