@@ -430,6 +430,13 @@ public class AHBottomNavigation extends FrameLayout{
                 final TextView title = (TextView) views.get(itemIndex).findViewById(R.id.bottom_navigation_small_item_title);
                 final ImageView icon = (ImageView) views.get(itemIndex).findViewById(R.id.bottom_navigation_small_item_icon);
 
+                AHHelper.updateTopPadding(container, activePaddingTop, inactivePadding);
+                AHHelper.updateTextColor(title, itemActiveColor, itemInactiveColor);
+                AHHelper.updateAlpha(title, 1, 0);
+                AHHelper.updateWidth(container, selectedItemWidth, notSelectedItemWidth);
+                AHHelper.updateDrawableColor(context, items.get(currentItem).getResource(), icon,
+                        itemActiveColor, itemInactiveColor);
+            }
 
 
             }
@@ -450,18 +457,4 @@ public class AHBottomNavigation extends FrameLayout{
 
 
 
-    }
 
-
-
-
-
-        }
-
-
-
-
-
-
-
-}
