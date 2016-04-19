@@ -466,6 +466,14 @@ public class AHBottomNavigation extends FrameLayout{
         createItems();
     }
 
+    /**
+     * Add all items
+     */
+    public void addItems(ArrayList<AHBottomNavigationItem> items) {
+        if (items.size() >= MAX_ITEMS || (this.items.size() + items.size()) > MAX_ITEMS) {
+            Log.w(TAG, "The items list should not have more than 5 items");
+        }
+
 
             }
 
