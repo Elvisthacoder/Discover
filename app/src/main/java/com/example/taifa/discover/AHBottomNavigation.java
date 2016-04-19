@@ -549,6 +549,15 @@ public class AHBottomNavigation extends FrameLayout{
         createItems();
     }
 
+    /**
+     * Get the inactive color (used when the view contains 3 items)
+     *
+     * @return The inactive color
+     */
+    public int getInactiveColor() {
+        return inactiveColor;
+    }
+
 
 
 
