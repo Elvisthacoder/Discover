@@ -511,6 +511,16 @@ public class AHBottomNavigation extends FrameLayout{
         createItems();
     }
 
+    /**
+     * Return the bottom navigation background color
+     *
+     * @return The bottom navigation background color
+     */
+    public int getDefaultBackgroundColor() {
+        return defaultBackgroundColor;
+    }
+
+
 
 
 
