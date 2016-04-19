@@ -568,6 +568,16 @@ public class AHBottomNavigation extends FrameLayout{
         createItems();
     }
 
+    /**
+     * Get the current item
+     *
+     * @return The current item position
+     */
+    public int getCurrentItem() {
+        return currentItem;
+    }
+
+
 
 
 
