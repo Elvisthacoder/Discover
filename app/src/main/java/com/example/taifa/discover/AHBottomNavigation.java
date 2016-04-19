@@ -477,6 +477,16 @@ public class AHBottomNavigation extends FrameLayout{
         createItems();
     }
 
+    /**
+     * Remove an item at the given index
+     */
+    public void removeItemAtIndex(int index) {
+        if (index < items.size()) {
+            this.items.remove(index);
+            createItems();
+        }
+    }
+
 
 
 
