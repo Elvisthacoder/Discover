@@ -530,6 +530,16 @@ public class AHBottomNavigation extends FrameLayout{
         createItems();
     }
 
+    /**
+     * Get the accent color (used when the view contains 3 items)
+     *
+     * @return The default accent color
+     */
+    public int getAccentColor() {
+        return accentColor;
+    }
+
+
 
 
 
