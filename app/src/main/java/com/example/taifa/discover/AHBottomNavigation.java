@@ -488,6 +488,15 @@ public class AHBottomNavigation extends FrameLayout{
     }
 
 
+    /**
+     * Remove all items
+     */
+    public void removeAllItems() {
+        this.items.clear();
+        createItems();
+    }
+
+
 
 
             }
