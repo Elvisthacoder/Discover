@@ -539,6 +539,16 @@ public class AHBottomNavigation extends FrameLayout{
         return accentColor;
     }
 
+    /**
+     * Set the accent color (used when the view contains 3 items)
+     *
+     * @param accentColor The new accent color
+     */
+    public void setAccentColor(int accentColor) {
+        this.accentColor = accentColor;
+        createItems();
+    }
+
 
 
 
