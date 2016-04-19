@@ -473,6 +473,11 @@ public class AHBottomNavigation extends FrameLayout{
         if (items.size() >= MAX_ITEMS || (this.items.size() + items.size()) > MAX_ITEMS) {
             Log.w(TAG, "The items list should not have more than 5 items");
         }
+        this.items.addAll(items);
+        createItems();
+    }
+
+
 
 
             }
