@@ -449,6 +449,19 @@ public class AHBottomNavigation extends FrameLayout{
         if (tabSelectedListener != null) {
             tabSelectedListener.onTabSelected(itemIndex, false);
         }
+    }
+
+    ////////////
+    // PUBLIC //
+    ////////////
+
+    /**
+     * Add an item
+     */
+    public void addItem(AHBottomNavigationItem item) {
+        if (this.items.size() >= MAX_ITEMS) {
+            Log.w(TAG, "The items list should not have more than 5 items");
+        }
 
 
             }
